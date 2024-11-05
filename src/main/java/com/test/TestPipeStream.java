@@ -50,7 +50,7 @@ public class TestPipeStream {
         int activeCount = threadPool.getActiveCount();
         System.out.println(activeCount);
         int chunkSize = 8*1024*1024; // 8 MB in bytes
-        ExecutorService writeExecutor = Executors.newFixedThreadPool(2);  // Define thread pool for upload tasks
+        ExecutorService writeExecutor = Executors.newFixedThreadPool(20);  // Define thread pool for upload tasks
         ThreadPoolExecutor threadPool2 = (ThreadPoolExecutor) uploadExecutor;
         activeCount = threadPool2.getActiveCount();
         System.out.println(activeCount);
